@@ -3,7 +3,8 @@ module.exports = function(api) {
   return {
     presets: [
       ['babel-preset-expo', {
-        // Removed 'expo-modules-core' from untranspiledModules to allow proper TypeScript transpilation
+        // Include expo-modules-core in untranspiledModules to ensure proper TypeScript transpilation
+        untranspiledModules: ['expo-modules-core']
       }],
     ],
   };
